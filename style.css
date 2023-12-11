@@ -38,9 +38,28 @@ body {
   height: 120px;
   width: 120px;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
     inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
     -0.5px -0.5px 0px rgba(255, 255, 255, 1),
     0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
     0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+}
+/*Estilos para el numero que va dentro de la barra de progreso*/
+#number{
+  font-weight: 600px;
+  color: #555;
+}
+/*Utilizamos el tag "Circle" para darle estilos*/
+circle{
+  fill: none;
+  /*linkamos el stroke con el id del tag "GradientColor"*/
+  stroke: url(#GradientColor);
+  stroke-width: 20px;
+  /*472 es la longitud total de la barra de progreso*/
+  stroke-dasharray: 427;
+  /*stroke-dashoffset es el offset de la barra de progreso(le va restando a la longitud total de la barra de progreso)*/
+  stroke-dashoffset: 100;
 }
