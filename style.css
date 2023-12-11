@@ -1,0 +1,30 @@
+/*Selectores globales*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+/*El contenido que tenga el body estará centrado en la pantalla*/
+body{
+  background: #e3edf7;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*Conenedor principal*/
+.habilidad{
+  width: 160px;
+  height: 160px;
+  /*background: cornflowerblue;*/
+  position: relative;
+}
+/*Circulo*/
+.outer{
+
+}
+/*Barra de progreso*/
+.inner{
+
+}
