@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  gap: 50px;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
@@ -47,19 +48,38 @@ body {
     0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
     0px 12px 10px -10px rgba(0, 0, 0, 0.05);
 }
+
 /*Estilos para el numero que va dentro de la barra de progreso*/
-#number{
+#numero {
   font-weight: 600px;
   color: #555;
 }
+
 /*Utilizamos el tag "Circle" para darle estilos*/
-circle{
+circle {
   fill: none;
   /*linkamos el stroke con el id del tag "GradientColor"*/
   stroke: url(#GradientColor);
   stroke-width: 20px;
   /*472 es la longitud total de la barra de progreso*/
-  stroke-dasharray: 427;
+  stroke-dasharray: 472;
   /*stroke-dashoffset es el offset de la barra de progreso(le va restando a la longitud total de la barra de progreso)*/
-  stroke-dashoffset: 100;
+  stroke-dashoffset: 472;
+  animation: anim 2s linear forwards;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+}
+
+/*En 2s se va completa la barra de progreso*/
+@keyframes anim {
+  100% {
+    /*mediante la formula 472-472*65/100= 165 (asi la barra carga hasta el 65%)*/
+    /*haz la formula para el 472-472*90/100= 165*/
+    stroke-dashoffset: 110;
+  }
 }
